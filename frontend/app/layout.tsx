@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Studio Peau" }],
   creator: "Studio Peau",
-  metadataBase: new URL("https://www.studiopeau.in"),
+  metadataBase: new URL("https://studio-peau.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -43,15 +43,29 @@ export const metadata: Metadata = {
     title: "Lip Blushing in Delhi | Studio Peau",
     description:
       "Premium semi-permanent lip blushing in Delhi. Wake up with perfect lips every day.",
-    url: "https://www.studiopeau.in",
+    url: "https://studio-peau.vercel.app",
     siteName: "Studio Peau",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/images/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Studio Peau Lip Blushing in Delhi",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Lip Blushing in Delhi | Studio Peau",
     description: "Premium semi-permanent lip blushing in Delhi.",
+    images: ["/images/og.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   robots: {
     index: true,
@@ -64,14 +78,14 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.studiopeau.in/#business",
+  "@id": "https://studio-peau.vercel.app/#business",
   name: "Studio Peau",
   description:
     "Premium lip blushing and semi-permanent makeup studio in Delhi, specialising in Korean beauty techniques.",
-  url: "https://www.studiopeau.in",
+  url: "https://studio-peau.vercel.app",
   telephone: "+91-99999-99999",
   email: "hello@studiopeau.in",
-  image: "https://www.studiopeau.in/og-image.jpg",
+  image: "https://studio-peau.vercel.app/images/og.png",
   priceRange: "₹₹₹",
   currenciesAccepted: "INR",
   paymentAccepted: "Cash, Credit Card, UPI",
