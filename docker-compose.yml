@@ -1,0 +1,18 @@
+version: "3.9"
+
+# ─── Studio Peau — Full Stack Docker Compose ─────────────────────────────────
+# Development: docker compose up --build
+# Production:  docker compose -f docker-compose.prod.yml up -d
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: studiopeau_web
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      NEXT_PUBLIC_WHATSAPP_NUMBER: ${WHATSAPP_NUMBER:-919999999999}
+    ports:
+      - "3000:3000"
