@@ -50,6 +50,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://studio-peau.vercel.app/images/og.png",
+        secureUrl: "https://studio-peau.vercel.app/images/og.png",
+        type: "image/png",
         width: 1200,
         height: 630,
         alt: "Studio Peau Lip Blushing in Delhi",
@@ -60,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lip Blushing in Delhi | Studio Peau",
     description: "Premium semi-permanent lip blushing in Delhi.",
-    images: ["https://studio-peau.vercel.app/images/og.png"],
+    images: [{ url: "https://studio-peau.vercel.app/images/og.png" }],
   },
   icons: {
     icon: "/images/favicon.ico",
