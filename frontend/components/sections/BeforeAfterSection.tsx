@@ -6,7 +6,11 @@ import { motion, useInView } from "framer-motion";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] },
+  },
 };
 
 export function BeforeAfterSection() {
@@ -18,16 +22,13 @@ export function BeforeAfterSection() {
   const [isDragging, setIsDragging] = useState(false);
 
   // ── Drag logic ──────────────────────────────────────────────────────────
-  const calcPosition = useCallback(
-    (clientX: number) => {
-      const container = containerRef.current;
-      if (!container) return;
-      const rect = container.getBoundingClientRect();
-      const rawPos = ((clientX - rect.left) / rect.width) * 100;
-      setSliderPos(Math.max(3, Math.min(97, rawPos)));
-    },
-    []
-  );
+  const calcPosition = useCallback((clientX: number) => {
+    const container = containerRef.current;
+    if (!container) return;
+    const rect = container.getBoundingClientRect();
+    const rawPos = ((clientX - rect.left) / rect.width) * 100;
+    setSliderPos(Math.max(3, Math.min(97, rawPos)));
+  }, []);
 
   const onMouseDown = () => setIsDragging(true);
 
@@ -162,7 +163,8 @@ export function BeforeAfterSection() {
                 className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center"
                 style={{
                   background: "var(--gold)",
-                  boxShadow: "0 0 0 4px rgba(10,10,10,0.8), 0 4px 20px rgba(0,0,0,0.5)",
+                  boxShadow:
+                    "0 0 0 4px rgba(10,10,10,0.8), 0 4px 20px rgba(0,0,0,0.5)",
                 }}
                 animate={{ scale: isDragging ? 1.15 : 1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 25 }}
@@ -189,7 +191,8 @@ export function BeforeAfterSection() {
 
           {/* Caption */}
           <p className="font-dm-sans text-[var(--ash)] text-xs mt-4 text-center tracking-wide">
-            Session 1 results · No retouching · Photo taken 4 weeks post-procedure
+            Session 1 results · No retouching · Photo taken 4 weeks
+            post-procedure
           </p>
         </motion.div>
 
@@ -203,9 +206,18 @@ export function BeforeAfterSection() {
           style={{ borderColor: "rgba(201,169,110,0.2)" }}
         >
           {[
-            { title: "Colour Customised", body: "Matched to your skin undertone and personal preference." },
-            { title: "Minimal Downtime", body: "Light flaking for 5–7 days. Back to life immediately." },
-            { title: "Gradual Fading", body: "Colour softens beautifully over 2–3 years, never harsh." },
+            {
+              title: "Colour Customised",
+              body: "Matched to your skin undertone and personal preference.",
+            },
+            {
+              title: "Minimal Downtime",
+              body: "Light flaking for 5–7 days. Back to life immediately.",
+            },
+            {
+              title: "Gradual Fading",
+              body: "Colour softens beautifully over 2–3 years, never harsh.",
+            },
           ].map((item) => (
             <div key={item.title} className="flex flex-col gap-2">
               <span className="gold-line" />
