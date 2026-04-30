@@ -35,22 +35,22 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Studio Peau" }],
   creator: "Studio Peau",
-  metadataBase: new URL("https://studio-peau.vercel.app"),
+  metadataBase: new URL("https://studiopeau.adilhusain.xyz"),
   alternates: {
-    canonical: "https://studio-peau.vercel.app/",
+    canonical: "https://studiopeau.adilhusain.xyz/",
   },
   openGraph: {
     title: "Lip Blushing in Delhi | Studio Peau",
     description:
       "Premium semi-permanent lip blushing in Delhi. Wake up with perfect lips every day.",
-    url: "https://studio-peau.vercel.app/",
+    url: "https://studiopeau.adilhusain.xyz",
     siteName: "Studio Peau",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://studio-peau.vercel.app/images/og.png",
-        secureUrl: "https://studio-peau.vercel.app/images/og.png",
+        url: "https://studiopeau.adilhusain.xyz/images/og.png",
+        secureUrl: "https://studiopeau.adilhusain.xyz/images/og.png",
         type: "image/png",
         width: 1200,
         height: 630,
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lip Blushing in Delhi | Studio Peau",
     description: "Premium semi-permanent lip blushing in Delhi.",
-    images: [{ url: "https://studio-peau.vercel.app/images/og.png" }],
+    images: [{ url: "https://studiopeau.adilhusain.xyz/images/og.png" }],
   },
   icons: {
     icon: "/images/favicon.ico",
@@ -80,14 +80,14 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://studio-peau.vercel.app/#business",
+  "@id": "https://studiopeau.adilhusain.xyz/#business",
   name: "Studio Peau",
   description:
     "Premium lip blushing and semi-permanent makeup studio in Delhi, specialising in Korean beauty techniques.",
-  url: "https://studio-peau.vercel.app",
+  url: "https://studiopeau.adilhusain.xyz",
   telephone: "+91-99999-99999",
   email: "hello@studiopeau.in",
-  image: "https://studio-peau.vercel.app/images/og.png",
+  image: "https://studiopeau.adilhusain.xyz/images/og.png",
   priceRange: "₹₹₹",
   currenciesAccepted: "INR",
   paymentAccepted: "Cash, Credit Card, UPI",
